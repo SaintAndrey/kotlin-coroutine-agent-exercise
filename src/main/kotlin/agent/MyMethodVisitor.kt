@@ -21,7 +21,7 @@ class MyMethodVisitor(var methodVisitor: MethodVisitor) : MethodVisitor(Opcodes.
                 && desc == DETECTED_STRING) {
 
             methodVisitor.visitFieldInsn(Opcodes.GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;")
-            methodVisitor.visitLdcInsn("Detected")
+            methodVisitor.visitLdcInsn("Test detected")
             methodVisitor.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/io/PrintStream",
                     "println", "(Ljava/lang/String;)V", false)
 
